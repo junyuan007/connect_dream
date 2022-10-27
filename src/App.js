@@ -9,38 +9,46 @@ import {
   Icon,
   Image,
 } from "semantic-ui-react";
-import image from "./assets/placeholder.jpg";
+import title_logo from "./assets/CD_LOGO_TRANS_2.png";
 import { Link } from "react-router-dom";
 import React from "react";
+//icons
+import Fab from "@mui/material/Fab";
+import AddIcon from '@mui/icons-material/Add';
+import Typography from '@mui/material/Typography';
+
 
 class App extends React.Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
+      <html lang="en" className="App-header">
+        <head className="App">
+        
+        </head>
+        <body className="App">
           <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
+          {ImageConnectDreamTrans()}
+          <div className="App-logo-tag-line">
+          <Typography variant="h6" gutterBottom>
+              <i>Dare to Dream, Dare to Be.</i>
+          </Typography>
+          </div>
           <a
             className="App-link"
-            href="https://reactjs.org"
+            href="https://www.hlb.com.my/en/personal-banking/home.html"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Learn React
+            HLB Official Website <br></br><br></br>
           </a>
-        </header>
-        <Link to="/other">
-          <Button content="link to other" secondary></Button>
-        </Link>
-        <button>primary</button>
 
-        {FormExampleForm()}
-
-        {InputExampleInput}
-        {ImageExampleBordered()}
-      </div>
+          {/* Create Button */}
+          <div className="App">
+          {CreateDreamButton()}<br></br>
+          </div>
+          </body>
+        
+      </html>
     );
   }
 }
@@ -62,12 +70,25 @@ const FormExampleForm = () => (
   </Form>
 );
 
+const CreateDreamButton = () => {
+  return (
+    <div>
+        <Link to="/create">
+              <Fab color="primary" aria-label="add">
+                <AddIcon />
+              </Fab>
+            </Link>
+    </div>
+  );
+};
+const ImageConnectDreamTrans = () => <Image src={title_logo} size="medium" centered bordered />;
+
+// Unused 
 const InputExampleInput = () => <Input placeholder="Search..." />;
-
-const ImageExampleBordered = () => <Image src={image} size="medium" bordered />;
-
+const ImageExampleBordered = () => <Image src={title_logo} size="medium" bordered />;
 const HeaderExampleUsersIcon = () => {
   return (
+    <html lang="en">
     <div>
       <Header as="h2" icon textAlign="center">
         <Icon name="users" circular />
@@ -79,6 +100,7 @@ const HeaderExampleUsersIcon = () => {
         src="/images/wireframe/centered-paragraph.png"
       />
     </div>
+    </html>
   );
 };
 

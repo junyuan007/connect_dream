@@ -14,18 +14,45 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  /* background-color: #e8ceee; */
+  background-color: white;
   min-height: 50vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  /* color: black; */
+  color: #134590;
+  overflow-x: auto;
+  overflow-y: auto;
 }
 
 .App-link {
-  color: #61dafb;
+  color: blue;
+}
+
+.App-logo-tag-line {
+  color: black;
+  font-size: 14px;
+}
+
+/* for DISPLAY text css */
+.App-display-text-title {
+  color: blue;
+}
+
+/* For image side by side */
+.App-image-side-column {
+  float: left;
+  width: 50%;
+  padding: 5px;
+}
+
+.App-image-side-row {
+  content: "";
+  clear: both;
+  display: table;
 }
 
 @keyframes App-logo-spin {
@@ -36,3 +63,14 @@
     transform: rotate(360deg);
   }
 }
+
+/* 
+White (background): #FFFFFF
+Black (font): #1E1E1E
+Dark blue: #134590
+Middle blue: #58A5EC
+Light blue: #DFF2FF
+Turquoise: #4882AD
+Violet: #2C368C
+Purple: #4E5FB7 
+*/

@@ -4,6 +4,14 @@ import "semantic-ui-css/semantic.min.css";
 import "./index.css";
 import App from "./App";
 import OtherPage from "./Other";
+
+//Connect-Dream Pages
+import CreatePage from "./Create";
+import UnderstandPage from "./Understand";
+import SolutionsPage from "./Solutions";
+import AdvicePage from "./Advice";
+
+
 import reportWebVitals from "./reportWebVitals";
 import {
   createBrowserRouter,
@@ -32,6 +40,23 @@ const router = createBrowserRouter([
     path: "/about",
     element: <Link to="/other">Other</Link>,
   },
+  {
+    path: "/create",
+    element: <CreatePage name="Jun"/>,
+  },
+  {
+    path: "/understand",
+    element: <UnderstandPage name="Jun"/>,
+  },
+  {
+    path: "/solutions",
+    element: <SolutionsPage name="Jun"/>,
+  },
+  {
+    path: "/advice",
+    element: <AdvicePage name="Jun"/>,
+  },
+
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
